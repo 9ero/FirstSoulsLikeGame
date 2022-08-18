@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 426572835}
   - component: {fileID: 426572838}
   - component: {fileID: 426572837}
+  - component: {fileID: 426572839}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -684,6 +685,21 @@ MonoBehaviour:
   moveAmount: 0
   mouseX: 0
   mouseY: 0
+  b_Input: 0
+  rollFlag: 0
+  isInteracting: 0
+--- !u!114 &426572839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426572833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd75272d10a7a94ab24ca7c560f8245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576554971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,5 +1507,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6a00371a5bb684c880f0967646bb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 2107146735}
+  inputHandler: {fileID: 0}
+  playerLocomotion: {fileID: 0}
   canRotate: 1
+--- !u!95 &2107146735 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 67ffdfb5be0ab6c47970e477caefb5fe, type: 3}
+  m_PrefabInstance: {fileID: 328395842}
+  m_PrefabAsset: {fileID: 0}
