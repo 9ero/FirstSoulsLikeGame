@@ -11,8 +11,10 @@ namespace JM
         public float moveAmount;
         public float mouseX;
         public float mouseY;
+        public float rollInputTimer;
 
         public bool b_Input;
+        public bool sprintFlag;
         public bool rollFlag;
         public bool isInteracting;
 
@@ -22,7 +24,7 @@ namespace JM
         Vector2 movementInput;
         Vector2 cameraInput;
 
-        private void Awake()
+        private void Start()
         {
             cameraHandler = CameraHandler.singleton;
         }
@@ -73,7 +75,17 @@ namespace JM
             
             if (b_Input)
             {
-                rollFlag = true;
+                rollInputTimer += delta;
+                sprintFlag = true;
+            }
+            else
+            {
+                if (rollInputTimer >0 && rollInputTimer < 0.5f)
+                {
+                    sprintFlag = false;
+                    rollFlag = true;
+                }
+                rollInputTimer = 0;
             }
             
         }
