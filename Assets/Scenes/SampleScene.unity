@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &75196068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75196069}
+  m_Layer: 0
+  m_Name: Left Hand Override
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &75196069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75196068}
+  m_LocalRotation: {x: -0.05163652, y: 0.20028225, z: 0.075972155, w: 0.9754225}
+  m_LocalPosition: {x: -0.0277, y: 0.0014, z: 0.0225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1511845679}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -7.537, y: 22.719, z: 7.391}
 --- !u!1 &186198457
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +726,7 @@ GameObject:
   - component: {fileID: 426572838}
   - component: {fileID: 426572837}
   - component: {fileID: 426572839}
+  - component: {fileID: 426572840}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -709,15 +741,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426572833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.462, z: 0}
+  m_LocalRotation: {x: -0, y: 0.9975127, z: -0, w: -0.07048673}
+  m_LocalPosition: {x: 0.00653998, y: 6.943, z: 3.1725605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2107146731}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 188.084, z: 0}
 --- !u!54 &426572835
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -810,6 +842,41 @@ MonoBehaviour:
   isSprinting: 0
   isInAir: 0
   isGrounded: 0
+--- !u!114 &426572840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426572833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31fbc5451374bd4cbe813f5fbbe91a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightWeapon: {fileID: 11400000, guid: 2c60be12b85ddc14d803fa90983667d1, type: 2}
+  leftWeapon: {fileID: 11400000, guid: 2c60be12b85ddc14d803fa90983667d1, type: 2}
+--- !u!1 &497683368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8141404156762811299, guid: 67ffdfb5be0ab6c47970e477caefb5fe, type: 3}
+  m_PrefabInstance: {fileID: 328395842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &497683370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497683368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4e5f48ec8eef845add53f0a0f9405d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentOverride: {fileID: 0}
+  isLeftHandSlot: 0
+  isRightHandSlot: 1
+  currentWeaponModel: {fileID: 0}
 --- !u!1 &576554971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1566,32 @@ Transform:
   m_Father: {fileID: 223896809}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1511845678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6678199804492921508, guid: 67ffdfb5be0ab6c47970e477caefb5fe, type: 3}
+  m_PrefabInstance: {fileID: 328395842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1511845679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 301995686973099868, guid: 67ffdfb5be0ab6c47970e477caefb5fe, type: 3}
+  m_PrefabInstance: {fileID: 328395842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1511845680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511845678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4e5f48ec8eef845add53f0a0f9405d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentOverride: {fileID: 75196069}
+  isLeftHandSlot: 1
+  isRightHandSlot: 0
+  currentWeaponModel: {fileID: 0}
 --- !u!1 &1763837280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,3 +1913,15 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 67ffdfb5be0ab6c47970e477caefb5fe, type: 3}
   m_PrefabInstance: {fileID: 328395842}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107146736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107146730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40da8c130967125459c891c85e021edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
