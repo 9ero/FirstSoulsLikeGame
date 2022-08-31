@@ -38,6 +38,8 @@ namespace JM
         float rotationSpeed = 10;
         [SerializeField]
         float fallingSpeed = 45f;
+        [SerializeField]
+        float walkingSpeed = 5;
 
         
         void Start()
@@ -93,7 +95,7 @@ namespace JM
 
             float speed = movementSpeed;
 
-            if (inputHandler.sprintFlag)
+            if (inputHandler.sprintFlag&&inputHandler.moveAmount>0.5f)
             {
                 speed = sprintSpeed;
                 playerManager.isSprinting = true;
@@ -101,7 +103,18 @@ namespace JM
             }
             else
             {
-                moveDirection *= speed;
+                if (inputHandler.moveAmount < 0.5f)
+                {
+                    speed = walkingSpeed;
+                    moveDirection *= speed;
+                    playerManager.isSprinting = false;
+                }
+                else
+                {
+                    moveDirection *= speed;
+                    playerManager.isSprinting = false;
+                }
+               
             }
 
             

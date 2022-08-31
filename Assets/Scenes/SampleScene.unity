@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 426572837}
   - component: {fileID: 426572839}
   - component: {fileID: 426572840}
+  - component: {fileID: 426572841}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -805,6 +806,7 @@ MonoBehaviour:
   sprintSpeed: 7
   rotationSpeed: 10
   fallingSpeed: 80
+  walkingSpeed: 5
 --- !u!114 &426572838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +826,8 @@ MonoBehaviour:
   mouseY: 0
   rollInputTimer: 0
   b_Input: 0
+  rb_Input: 0
+  rt_Input: 0
   sprintFlag: 0
   rollFlag: 0
 --- !u!114 &426572839
@@ -856,6 +860,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightWeapon: {fileID: 11400000, guid: 2c60be12b85ddc14d803fa90983667d1, type: 2}
   leftWeapon: {fileID: 11400000, guid: 2c60be12b85ddc14d803fa90983667d1, type: 2}
+--- !u!114 &426572841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426572833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ae668b6e2d51498e9033d2a45b5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &497683368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8141404156762811299, guid: 67ffdfb5be0ab6c47970e477caefb5fe, type: 3}
