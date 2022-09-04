@@ -167,7 +167,7 @@ namespace JM
             if (playerManager.isInAir)
             {
                 rigidbody.AddForce(-Vector3.up * fallingSpeed);
-                rigidbody.AddForce(moveDirection * fallingSpeed / 5f);
+                rigidbody.AddForce(moveDirection * fallingSpeed / 9f);
             }
 
             Vector3 dir = moveDirection;
@@ -194,7 +194,7 @@ namespace JM
                     }
                     else
                     {
-                        animatorHandler.PlayTargetAnimation("Locomotion", false);
+                        animatorHandler.PlayTargetAnimation("Empty", false);
                         inAirTimer = 0;
                     }
                     playerManager.isInAir = false;
@@ -225,7 +225,7 @@ namespace JM
             {
                 if (playerManager.isInteracting || inputHandler.moveAmount > 0)
                 {
-                    myTransform.position = Vector3.Lerp(myTransform.position, targetPosition, Time.deltaTime);
+                    myTransform.position = Vector3.Lerp(myTransform.position, targetPosition, Time.deltaTime/0.1f);
                 }
                 else
                 {
